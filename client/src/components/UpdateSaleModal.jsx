@@ -53,7 +53,7 @@ export default function UpdateSaleModal({
 
   const handleUpdate = async () => {
     try {
-      await axios.put(`http://localhost:4000/sales/${sale._id}`, formData);
+      await axios.put(`https://stock-qtn8.onrender.com/sales/${sale._id}`, formData);
       fetchSales();
       onClose();
     } catch (error) {

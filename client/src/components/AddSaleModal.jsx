@@ -27,7 +27,7 @@ const AddSaleModal = ({ storesData, productsData, fetchSales }) => {
     e.preventDefault();
     console.log(salesdata);
     try {
-      const res = await axios.post("http://localhost:4000/sales", salesdata);
+      const res = await axios.post("https://stock-qtn8.onrender.com/sales", salesdata);
       // console.log(res);
       setShowModal(false);
       setSalesData({

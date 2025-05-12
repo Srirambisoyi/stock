@@ -19,7 +19,7 @@ function Signin() {
     // e.preventDefault();
     // console.log(userdata);
     try {
-      const res = await axios.post("http://localhost:4000/signin", userdata);
+      const res = await axios.post("https://stock-qtn8.onrender.com/signin", userdata);
       // console.log(res);
       setUserData({ email: "", password: "" });
       const user = res.data;

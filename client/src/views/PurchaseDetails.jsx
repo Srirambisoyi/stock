@@ -17,7 +17,7 @@ export default function PurchaseDetails(params) {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/purchase");
+      const res = await axios.get("https://stock-qtn8.onrender.com/purchase");
       setProductsData(res.data);
     } catch (error) {
       console.log("ERROR", error);
@@ -26,7 +26,7 @@ export default function PurchaseDetails(params) {
 
   const deleteProducts = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/purchase/${id}`);
+      await axios.delete(`https://stock-qtn8.onrender.com/purchase/${id}`);
       fetchProducts();
     } catch (error) {
       console.log(error);

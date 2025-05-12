@@ -14,7 +14,7 @@ const AddProductModal = ({ fetchProducts }) => {
     console.log(productsdata);
     try {
       const res = await axios.post(
-        "http://localhost:4000/products",
+        "https://stock-qtn8.onrender.com/products",
         productsdata
       );
       console.log(res);

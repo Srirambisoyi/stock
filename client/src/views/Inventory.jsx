@@ -18,7 +18,7 @@ export default function Inventory(params) {
 
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/products");
+      const res = await axios.get("https://stock-qtn8.onrender.com/products");
       setProductsData(res.data);
       // console.log(res.data);
     } catch (error) {
@@ -30,7 +30,7 @@ export default function Inventory(params) {
     console.log(id);
     try {
       const response = await axios.delete(
-        `http://localhost:4000/products/${id}`
+        `https://stock-qtn8.onrender.com/products/${id}`
       );
       fetchProducts();
       console.log(response);

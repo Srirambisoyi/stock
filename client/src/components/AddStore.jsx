@@ -14,7 +14,7 @@ const AddStore = ({ fetchStores }) => {
     e.preventDefault();
     console.log(storesdata);
     try {
-      const res = await axios.post("http://localhost:4000/stores", storesdata);
+      const res = await axios.post("https://stock-qtn8.onrender.com/stores", storesdata);
       console.log(res);
       setShowModal(false);
       setStoresData({ name: "", address: "", cost: "", sell: "" });

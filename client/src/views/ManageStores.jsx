@@ -16,7 +16,7 @@ export default function ManageStores() {
 
   const fetchStores = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/stores");
+      const res = await axios.get("https://stock-qtn8.onrender.com/stores");
       setStoresData(res.data);
     } catch (error) {
       console.log("ERROR", error);
@@ -116,7 +116,7 @@ function EditStoreModal({ open, handleClose, store, fetchStores }) {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:4000/stores/${store._id}`, { name, address, cost, sell });
+      await axios.put(`https://stock-qtn8.onrender.com/stores/${store._id}`, { name, address, cost, sell });
       fetchStores();
       handleClose();
     } catch (error) {
@@ -144,7 +144,7 @@ function EditStoreModal({ open, handleClose, store, fetchStores }) {
  function DeleteStoreModal({ open, handleClose, store, fetchStores }) {
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:4000/stores/${store._id}`);
+      await axios.delete(`https://stock-qtn8.onrender.com/stores/${store._id}`);
       fetchStores();
       handleClose();
     } catch (error) {

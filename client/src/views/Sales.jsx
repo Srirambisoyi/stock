@@ -19,7 +19,7 @@ export default function Sales() {
   // Fetch Sales Data
   const fetchSales = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/sales");
+      const res = await axios.get("https://stock-qtn8.onrender.com/sales");
       console.log("Sales Data Response:", res.data); // Debugging API Response
       if (Array.isArray(res.data)) {
         setSalesData(res.data);
@@ -34,7 +34,7 @@ export default function Sales() {
   // Fetch Products Data
   const fetchProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/products");
+      const res = await axios.get("https://stock-qtn8.onrender.com/products");
       setProductsData(res.data || []);
     } catch (error) {
       console.error("Error fetching products:", error);
@@ -44,7 +44,7 @@ export default function Sales() {
   // Fetch Stores Data
   const fetchStores = async () => {
     try {
-      const res = await axios.get("http://localhost:4000/stores");
+      const res = await axios.get("https://stock-qtn8.onrender.com/stores");
       setStoresData(res.data || []);
     } catch (error) {
       console.error("Error fetching stores:", error);
@@ -54,7 +54,7 @@ export default function Sales() {
   // Delete Sale
   const deleteProduct = async (id) => {
     try {
-      await axios.delete(`http://localhost:4000/sales/${id}`);
+      await axios.delete(`https://stock-qtn8.onrender.com/sales/${id}`);
       fetchSales();
     } catch (error) {
       console.error("Error deleting sale:", error);
